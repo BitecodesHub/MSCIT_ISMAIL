@@ -1,7 +1,7 @@
 # MSCIT_ISMAIL  
 **Module:** MSC IT – Semester Notes  
 **Author:** Ismail Mansuri (Roll No: 202512075)  
-**Organisation:** BiteCodesHub  
+**Organisation:** BiteCodes  
 
 ## 📘 About this Repository  
 This repository contains my complete **class notes** for the MSC IT programme. I have organised these notes by subject to make revision easy and structured.
