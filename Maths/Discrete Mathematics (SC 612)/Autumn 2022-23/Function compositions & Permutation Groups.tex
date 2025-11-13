@@ -1,0 +1,24 @@
+\documentclass[11pt]{article}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\title{Functions Composition \& Permutation Groups}
+\begin{document}
+\maketitle
+An {\bf injective function} is a function $f$ from $D$ to $C$ such that $\forall x,y\in D, x\neq y, f(x)\neq f(y)$.
+
+A {\bf surjective function} is a function $f$ from $D$ to $C$ such that $\forall x \in C, \exists y\in D| f(y)=x$.
+
+A {\bf bijective function} is a function that is both injective and surjective.
+
+The necessary condition for the existence of an injective function from $D$ to $C$ is that $|D|\le|C|$ and for the existence of a surjective function is $|C|\le|D|$.
+
+Thus the necessary condition for the existence of a bijective function from $D$ to $C$ is $|D|=|C|$.
+
+Bijective functions from a set $S$ onto itself is called a {\bf permutation}. Permutations are often written in two-row format with the elements of the domain listed in order in the first row and their corresponding image below them on the second row. 
+
+{\bf Function composition} is taking an argument then applying ne function and applying the second function to the answer. The necessary condition for composing two functions is that the range of the first function must be a subset of the domain of the second function. 
+
+This is usually trivial for permutations. The composition of two permutations is alo a permutation. Composition of permutations is {\bf non-commutative}. Evaluation of the composition of three permutations is {\bf associative}. In fact this is true for any three functions where composition is compatible. 
+Thus the set of all permutations of a set, under function composition form a well-known example of a {\bf non-Abelian group}.
+
+\end{document}

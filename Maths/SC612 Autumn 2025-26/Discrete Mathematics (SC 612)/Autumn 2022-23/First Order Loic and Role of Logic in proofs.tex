@@ -1,0 +1,35 @@
+\documentclass[11pt]{article}
+\title{First order Logic and role of logic in proofs}
+\begin{document}
+\maketitle
+{\bf First order logic} also known as {\bf predicate logic} has two fundamental operators or connectives:
+\begin{itemize}
+\item {\bf Existential quantifier:} denoted symbolically by $\exists$ and is used to quantify the presence of atleast one element over a set that satisfies some condition. The condition is usually a proposition, or a formula in propositional logic, but can also be from other contexts.
+\item {\bf Universal quantifier:} denoted symbolically by $\forall$. 
+\end{itemize}
+
+The two most important logical equivalences in first order logic are:
+\begin{itemize}
+\item $\neg(\forall x, P(x))\equiv \exists x, \neg(P(x))$
+\item $\neg(\exists x, P(x))\equiv \forall x, \neg(P(x))$
+\end{itemize}
+
+The first of the two above is used in the {\bf proof technique} called {\bf proof by counter example}. We used it to refute the dubious conjecture that for every positive multiple of 10, say $y=10x$, the number of primes $\le y$ is $4x$.
+
+
+Some examples of use of first order logic in mathematics:
+
+In the context of limits in calculus, consider \[f(x)=\frac{x^2-6x-7}{x-7}\] and  \[L=\lim_{x\to7} f(x)=8\]
+
+This can be rephrased as \[\forall \epsilon\in R, \exists \delta\in R| \forall x\in ((8-\delta,8+\delta), |L-f(x)|\le \epsilon\]
+
+A second example of an application of first order logic is an alternating two player strategy game. A player $P_1$ to play has a winning strategy in the current game configuration against player $P_2$, if:
+\[\exists m_1|\forall m'_1 \exists m_2|\forall m'_2|\cdots|\exists m_k \mbox{ player } P_1 \mbox{ has a win }\]
+
+This is an example of {\bf nested quantifiers} (several quantifiers within a chain).
+
+In propositional logic we have associated with $p\Rightarrow q$ what is known as its {\bf converse}, namely $q\Rightarrow p$. Thse are not logically equivalent. In fact these are usually the two sides of a proof of a theorem of the {\bf if and only if} type. 
+
+On the other hand, $((\neg q) \Rightarrow (\neg p))\equiv (p\Rightarrow q)$.
+The formula on the left hand side of the equivalence is the {\bf contrapositive} of the one on the right and {\bf vice versa}. {\bf Proof by contraposition} is a powerful proof technique.
+\end{document}

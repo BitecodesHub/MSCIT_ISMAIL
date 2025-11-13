@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+\title{Mathematical Logic- Axioms/ Inference rules}
+\begin{document}
+\maketitle
+We looked at a list of some basic axioms of propositional logic:
+\begin{enumerate}
+\item {\bf Identity rules:}
+\begin{itemize}
+\item $p\wedge T\equiv p$
+\item $p\vee F\equiv p$
+\end{itemize}
+\item {\bf domination rules:}
+\begin{itemize}
+\item $p\wedge  F\equiv F$
+\item $p\vee T\equiv T$
+\end{itemize}
+\item {\bf Idompetent rules:}
+\begin{itemize}
+\item $p\vee p\equiv p$
+\item $p\wedge p\equiv p$
+\end{itemize}
+\item {\bf ouble Negation rule:} 
+\begin{itemize}
+\item $\neg \neg p\equiv p$
+\end{itemize}
+\item {\bf Commutative rules:}
+\begin{itemize}
+\item $p\wedge q\equiv q\wedge p$
+\item $p\vee q\equiv q\vee p$
+\end{itemize}
+\item {\bf Associative rules:}
+\begin{itemize}
+\item $((p\vee q)\vee r))\equiv (p\vee(q\vee r))$
+\item $((p\wedge q)\wedge r))\equiv (p\wedge(q\wedge r))$
+\end{itemize}
+\item {\bf Distributive rules:}
+\begin{itemize}
+\item $p\wedge (q\vee r)\equiv (p \wedge q)\vee (p\wedge r)$
+\item $p\vee(q\wedge r)\equiv (p\vee q)\wedge (p\vee r)$
+\end{itemize}
+\item {\bf de Morgan's rules:}
+\begin{itemize}
+\item $\neg(p\vee q)\equiv (\neg p)\wedge (\neg q)$
+\item $\neg(p\wedge q)\equiv (\neg p)\vee (\neg q)$
+\end{itemize}
+\item {\bf Absorption rules:}
+\begin{itemize}
+\item $p\wedge (p\vee q)\equiv p$
+\item $p\vee (p\wedge q)\equiv p$
+\end{itemize}
+\item {\bf Negation laws:}
+\begin{itemize}
+\item $p\vee (\neg p)\equiv T$ (called {\bf tautology/validity})
+\item $p\wedge (\neg p)\equiv F$(called {\bf contradiction})
+\end{itemize}
+\end{enumerate}
+
+Propositional logic has several inference rules, which may be used to derive complex formula as theorems, from simpler ones.
+For example:
+\begin{enumerate}
+\item From $p\vee q$, $\neg p$ we can infer $q$
+\item From $p\oplus q$ we can infer $p\vee q$
+\item From $p\oplus q$ we can infer $\neg(p\wedge q)$
+\end{enumerate}
+
+There are some more elementary {bf inference rules} but the topic wont be dealt with more elaborately. A logic is considered {\bf sound} if there is a set of axioms and inference rules, such that any conclusion drawn by starting with some axioms and applying inference rules, is semantically a tautology. A logic is considered complete if every tautology in the semantic sense, has a corresponding syntactic formula that can be derived starting at some axioms and applying a series of inference rules. It is known that {\bf propositional logic} has a {system of axioms and inference rules} under whicht eh logic is {\bf sound and complete}. We will not be covering this in detail in this course.
+
+A formula that has no atisfying assignments is said to be a {\bf contradiction}.
+
+A formula that has at least one satisfying assignment is said to be a {\bf satisfiable formula}.
+
+A formula that is true under all assignments is called a {\bf tautology} oir a {\bf validity}.
+
+Typically a valid formula or tautology is one that is true under all assignments. One simple rule for constructing valid formulae is to take any two formulae $\psi_1$ and $\psi_2$ and such that under all truth assignments in which $\psi_1$ is true, $\psi_2$ is also true. In this case we can conclude that $\psi_1\Rightarrow \psi_2$. We saw this concept from the semantic point of view, using truth tables, in the lecture.
+
+Students should construct examples of these on their own, for practice. Students should also learn to get a closed form formulae for number of satisfying assignments for various formulae following a pattern of operators. 
+
+The problem of deciding algorithmically whether a given formula has a satisfying assignment is believed to be computationally very hard. This problem falls under the category of {\bf NP Complete Problems}. This is a technical term that wont be elaborated precisely. In simple terms, it indicates a problem whose best algorithm is likely to run in exponential time. A {\bf naive but imprecise explanation} for this phenomenon is that the number of possible truth assignments that need to be checked before we know whether it is satisfiable can be as high as $2^n$ where $n$ is the number of propositional variables.
+
+We also had a quick look at conversion of integers between different number systems. A quick example here:
+
+Write 600 in ternary (base 3; that is using only 0,1,2). 
+First step list the various powers of 3.
+1,3,9,27,81,243,729. 
+The last on the list exceeds our target, so ignore it. The next number is 243. 600 is more than two times 243 but less than three times.
+Thus we mark 2 in the position corresponding to $243=3^5$. The residue after performing $600-(2\times243)=114$. The next smallr power of 3 below 243 is 81. 81 is less than 114 but two times 81 is more than 114. Thus we mark 1 for the position $81=3^4$. The residue is now $114-81=33$. The biggest power of 3 heree is 27. This $27<33<2\times 27$. Thus we mark 1 for $27=3^3$. The residue is $33-27=6$. This is less than 9 thus we mark 0 for the position corresponding to $9=3^2$. Residue is still 6 which is greater than 3 and is in fact two times 3. We thus mark 2 for $3=3^1$. Residue is $6-6=0$. We thus mark 0 for $1=3^0$. We get our {\bf ternary representation of  decimal 600 as:}
+\[211020\]
+
+Students should practice converting numbers between bases 2,3,7,8, 10 etc.
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\title{Power Set Partial Order}
+\begin{document}
+\maketitle
+Consider a set $S$, and its power set $P(S)$. The relation on $P(S)$ where two elements of $P(S)$ are related if and only if one of them is a subset of the other is clearly a partial order. One can easily verify:
+\begin{itemize}
+\item Reflexive
+\item Anti-symmetric
+\item Transitive
+\end{itemize}
+
+A hypercube is an infinite family of undirected graphs, one for each non-negative integer $k$.
+
+The direct definition:
+\begin{definition}
+The vertex set $V=\{\mbox{ one vertex vor each bit string of length } k\}$. Two vertices are connected by an edge if and only if the strings they represent differ in exactly one position.
+\end{definition}
+
+Inductive definition.
+\begin{definition}
+\begin{itemize}
+\item {\bf Base case} The hypercubt $Q_0$ is the graph on a single vertex and no edges.
+\item {\bf Inductive step:} Here, we construct $Q_{k+1}$ by taking two {\bf vertex disjoint} copies of $Q_k$ and adding edges between the corresponding vertices in the two copies.
+\end{itemize}
+\end{definition}
+
+As we saw in the class, these two definitions result in the same graph. 
+
+We also saw earlier how a bit string represents a subset of a set. 
+
+Such a partial order is called the {\bf Power Set Partial Order}. 
+
+Thus it follow that the {\bf directed version} of the {\bf  hypercube $Q_k$}, where the edge is directed from the vertex where the differing bit is 0 to the vertex where the differing bit is 1, is the {\bf Hasse diagrap of the power set partial order of a set of $k$ elements}.
+
+\begin{theorem}
+Every partial order is isomorphic to a subgraph of the power set partial order.
+\end{theorem}
+To prove this, we just need to label every vertex in the partial order with a distinct set, such that when an arrow goes from vertex $a$ to vertex $b$ the set labelling $a$ is a proper subset of the set labelling $b$. We work only on the {\bf Hasse fdiagram}, not the entire partial order. Towards this we first add a super source (if there is no unique source) and draw arrows from the super source to all the original sources. 
+
+Although, I did mention a similar action for a super sink, in the lecture, it is not needed for this purpose.
+
+We label the source (original, or super) with the empty set. At each new iteration, we pass on the label of a node to all its out-neighbours. At each iteration, we delete the previously labelled nodes. For the new sources, we append a new singleton element (not used so far) and the union of the sets passed to it from earlier levels. This results in the labelling we aimed for.
+
+\end{document}

@@ -1,0 +1,34 @@
+\documentclass[11pt]{article}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\title{Functions \& Groups}
+\begin{document}
+\maketitle
+A {\bf function} from domain $D$ to codomain $C$ is a special type of relation. The extra condition is that each element of the domain appears exactly once as the first coordinate of an ordered pair.
+
+The number of functions is $n^m$ where $|D|=m$ and $|C|=n$.
+
+A standard notation for the set of all functions from domain $D$ to codomain $C$ is $C^D$.
+
+A group is a special type of ternary relation on a se. It can also be viewed as a function from $G\times G\rightarrow G$.
+
+The basic definition of a group has an underlying set $G$ together with a binary operaion $*$, and these must satisfy the following four axions:
+\begin{enumerate}
+\item {\bf Closure:} $\forall g_1, g_2\in G, g_1*g_2 \in G$.
+\item {\bf Identity}: $\exists e\in G, \forall g \in G, g*e=e*g=g$.
+\item {\bf Inverses}: $\forall g\in G, \exists g'| g*g'=g'*g=e$.
+\item {\bf Associativity}: $\forall g_1, g_2, g_3 \in G, (g_1*g_2)*g_3=g_1\*(g_2*g_3)$.
+\end{enumerate}
+
+Extra condition for {\bf Abelian groups}: $\forall g_1, g_2 \in G, g_1*g_2=g_2*g_1$.
+
+Exampls of groups:
+\begin{enumerate}
+\item All Boolean functions over $k$ variables, under the $\oplus$ operation.
+\item Integers modulo 5 under addition
+\item Integers under addition.
+\end{enumerate}
+All these are Abelian groups. We will see non-Abelian groups next lecture.
+
+A finite group may be represented as a matrix of $|G|\times |G|$ dimensions. The rows and columns are labelled with the elements and the entry $(i,j)$ is $g_i*g_j$.
+\end{document}

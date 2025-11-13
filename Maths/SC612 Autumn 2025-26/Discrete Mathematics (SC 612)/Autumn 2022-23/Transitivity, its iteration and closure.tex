@@ -1,0 +1,25 @@
+\documentclass[11pt]{article}
+\title{Transitivity: Its iteration and closure}
+\begin{document}
+\maketitle
+In relations, {\bf transitivity} requires: \[(((a,b)\in R)\wedge ((b,c)\in R))\Rightarrow ((a,c)\in R)\]
+
+This notion can be iterated. That is it is applied several times. When applying it leads to no further changes, it is called the {\bf transitive closure}. For example the relation $R=\{(a,b),(b,a)\}$ is not transitive. We need to include the pairs $(a,a)$ and $(b,b)$, to render it transitive.
+
+The relation $R=\{(a,b),(b,c),(a,c)\}$ is transitive. 
+
+A simple undirected graph can be thought of as a mathematical structure with the following two attributes:
+\begin{itemize}
+\item A finite set $V$ called its set of {\bf vertices} or {\bf nodes}.
+\item An {\bf edge} set, which is a binary, irreflexive, symmetric relation on the vertex set.
+\end{itemize}
+
+The reachability relation on undirected graphs forms a relation that is 
+\begin{itemize}
+\item Reflexive
+\item Symmetric
+\item Transitive
+\end{itemize}
+
+A relation of this type (satisfying the above three properties) is called an {\bf equivalence relation}. This is an important class of relatins and we will study them in greater detail.
+\end{document}

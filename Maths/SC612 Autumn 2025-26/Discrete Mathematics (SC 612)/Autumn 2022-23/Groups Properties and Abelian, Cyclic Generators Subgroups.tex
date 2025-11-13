@@ -1,0 +1,40 @@
+\documentclass[11pt]{article}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\title{Functions Composition \& Permutation Groups}
+\begin{document}
+\maketitle
+\begin{theorem}
+The group identity element is unique.
+\end{theorem}
+Proof (by contradiction)
+
+Assume there are two identities $e_1, e_2$ with $e_1\neq e_2$. Then,
+\[e_2=e_1*e_2=e_1\]
+
+\begin{theorem}
+Every element in a group has a unique inverse.
+\end{theorem}
+Proof (by contradiction)
+
+Suppose $x$ has two distinct inverses $y$ and $z$. Then,
+\[x*y=y*x=x*z=z*x=e\]
+Thus,
+\[x*y=z*x\]
+Premultiplying both sides by $z$, and using associativity, we get
+\[(z*x)*y=z*(z*x)\]
+This simplifies to \[e*y=z*e\]
+or \[y=z\]
+
+\begin{theorem}
+Group equations have unique solutions. That is $g_1*x=g_2$ has exactly one solution (not more, nor less) where $x$ is unknown and $g_1$ and $g_2$ are two known elements of the group (possibly equal).
+\end{theorem}
+Proof
+
+left multiplying both sides by $g_1^{-1}$ and using associativity, we get, 
+\[x=g_1^{-1}*g_2\]
+
+\begin{theorem}
+
+\end{theorem}
+\end{document}

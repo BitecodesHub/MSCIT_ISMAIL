@@ -1,0 +1,20 @@
+\documentclass[11pt]{article}
+\newtheorem{theorem}{Theorem}
+\title{Equivalence relatios and Set Partitions}
+\begin{document}
+\maketitle
+An {\bf equivalence relation} is one that is reflexive, symmetric and transitive.
+
+Given a set $S$, a partition of $S$ is a collection $A_1,\ldots,A_t$ of sets such that,
+\[1\le i \le t, A_i\subseteq S\]
+\[\bigcup_{i=1}^t A_i=S\]
+\[1\le i\le j \le t, A_i\cap A_j=\emptyset\]
+
+\begin{theorem}
+Every partition has associated with it a unique equivalence relation, and vice versa.
+\end{theorem}
+{\bf Proof:}\\
+Given an equivalence relation, start with a fine partition with each element alone in its own equivalence class. Repeately, merge equivalence classes that contribute one entry each, to an ordered pair in the relation. This creates the partition.
+
+Conversely, given a partition, define the equivalence relation as the union of the cartesian products of each of the individual parts of the partition.
+\end{document}

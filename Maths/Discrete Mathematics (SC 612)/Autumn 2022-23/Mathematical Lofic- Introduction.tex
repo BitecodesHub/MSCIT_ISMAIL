@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\title{Mathematical Logic- Introductory Lecture}
+\begin{document}
+\maketitle
+Mathematical Logic is a class of tools constituting a specific mathematical discipline. It is a vast subject in its own right, and we will be looking at a limited portion of it in the course on Discrete Mathematics. There is a wide variety of mathematical logic variants each with its own applicability, theory and complexiuty. In this course we will look at
+\begin{enumerate}
+\item Propositional/ Boolean Logic
+\item First ordet/ Predicate Logic
+\end{enumerate}
+
+The initial few lectures, will focus on Propositional Logic, while later on we will look at First Order Logic.
+
+The relevance of logic can be summarised as follows
+\begin{enumerate}
+\item It provides a language in which one may express ideas clearly/ unambiguously, which is often difficult in natural or non-mathematical language.
+\item It provides a mechanism to draw conclusions based on logical reasoning. It draws compound conclusions on the basis of simpler observations, without getting into the mechanism of truth or falsity of the simpler observations.
+\item It is used in solving puzzles as well as problems and mathematical proofs by bringing about a certain rigour of method, using abstraction. Abstraction refers to removing or ignoring unnecessary details and focussing on the essentials.
+\item Propositional logic connectives can be implemented as electronic gates, and thus many fundamental computations take place using electronic implementations of boolean logic formulae.
+\item Logical constructs are often used in programming language constructs.
+\end{enumerate}
+
+
+Standard structure of logics usually involves two distinct terms. They are:
+\begin{itemize}
+\item {\bf Syntax:} This is the structural rules, by which formulae in the logic are constructed.
+\item {\bf Semantics:} This is the mechanism by which the truth value (true/fal;se) or meaning of the formulae is determined under varying values of the underlying atomic variables. In the context of {\bf propositional logic} this is often represented by a {\bf truth table}.
+\end{itemize}
+{\bf Propositional Logic}\\
+
+Propositional logic is a logic system in which complex formulae are built up from atomic propositions , combining them using some standard operations. The logic does not concern itself with how the truth of the atomic propositions is determined. It takes the truth or falsity of the atomic propositions as given, and determines the truth or falsity of complex formulae, from these values. The {\bf propositions} give the logic the name {\bf propositional logic}.
+
+This logic also goes by the name {\bf boolean logic}. This is because it interprets the truth and falsity of formulae and such two valued variables taking true and false are named {\bf boolean variabes}. This is after a pioneering computer scientist called {\bf George Bool}.
+
+If we consider a propositional logic formula on $k$ propositional variables, we notice that each variable can take two possible values (True/ False) independently of the other propositional variables. Thus there are a total of $2^k$ possible truth assignments. These typically constitute the rows of the truth table. 
+
+A formula can evaluate to either treu or false under any assignment, giving two possibiilities in each assignment. Thus the number of {\bf semantically distinct} propositional logic formulae on $k$ propositional values is $2^{2^k}$. We know some well known formulae like {\sc and} of all the variables or {\sc or} of all the variables or {\sc xor} of all the variables. Clearly the number of formulae is much larger ($2^{2^k}$) and so many of them must be non-standard.
+
+One example of two syntactic representations of the same semantic formula, that we saw in today's lecture
+$\phi= \neg(p\wedge q)$ and $\psi= (\neg p)\vee(\neg q)$.
+
+We also covered modulo arithmetic and its applications in simplifying calculations.
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+\title{Mathematical Logic- Syntax \& Structural induction}
+\begin{document}
+\maketitle
+Structural Induction is a more general variant of the well-known mathematical induction.
+
+While mathematical induction is used to build up results based on increasing value of integers, structural inductionis used to build up results on the basis of increasing complexity of structure. We will use this to define what constitute well-formed or legal formulae in Propositional logic. There is a 3-level hierarchy of such formulae. The highest level uses the standard logical connectives as defined below.
+
+The standard logical connectives are:
+\begin{itemize}
+\item Unary Connectives
+\begin{enumerate}
+\item NOT/ Negation denoted symbolically by $\neg$
+\end{enumerate}
+\item Binary Connectives
+\begin{enumerate}
+\item AND/ Conjunction denoted symbolically by $\wedge$
+\item OR/ Disjunction denoted symbolically by $\vee$
+\item XOR /  Excusive OR denoted symbolically by $\oplus$
+\item Implication denoted symbolically by $\Rightarrow$
+\item Biimplication or equivalence denoted symbolically by $\Leftrightarrow$ or $\equiv$
+\end{enumerate}
+\end{itemize}
+There are also some other well-known logical connectives like NAND and NOR.
+
+The collection of well-formed or legal formulae in propositional logic form the following three level hierarchy:
+\begin{enumerate}
+\item The constants T/TRUE/1 and F/FALSE/0
+\item The atomic propositions $P=\{p_0, p_1, p_2, p_3,\ldots\}$
+\item Complicatef formulae obtained by applying the unary connective to a single formula or one of the binary connectives to two formulae. For non-commutative connectives, care must be taken to not interchange the order of the operands. Always pad each formula obtained, with a pair of brackets. This will ensure that at some point during the structural induction, one does not accidentally create ambiguity in the case of a collection of non-associative operations.
+\end{enumerate}
+
+The constants true and false are strictly not necessary as True can be replaced by $p\vee\neg p$ and False by $p \wedge\neg p$.
+
+We also studied the notion of a Formula tree and how to move from a formula to a formula tree and vice versa. 
+
+From the process of constructing complex formulae from simpler ones via structural induction, we observed that the number of possible formulae that may be constructed is infinite, even with a fixed finite list of propositional variables. However, we saw that there are only $2^{2^k}$ semantically distinct formulae on $k$ propositional variables. We can immediately conclude that several syntactically different formulae are semantically distinct. We even looked at some examples.
+
+\end{document}

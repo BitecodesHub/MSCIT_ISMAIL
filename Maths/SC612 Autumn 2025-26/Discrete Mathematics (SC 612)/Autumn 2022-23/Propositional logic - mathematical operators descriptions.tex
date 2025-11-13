@@ -1,0 +1,36 @@
+\documentclass[11pt]{article}
+\title{Mathematical Logic- A look at some standard mathematical operator attributes}
+\begin{document}
+\maketitle
+We intended to zero in on the basics of mathematical logic. However, we did not formally enter the framework of syntax, semantics and truth tables in great detail.
+
+We looked at the connectives of conjunction (AND), disjunction (OR) and negation (NOT), without a detailed look at their truth tables. The first two are binary operators (take two operands) while the third is unary (takes only one operand).
+
+We saw how, although the operands OR and AND are binary, they can be extended by repeated application to any number of operands. In the process of doing so, we learnt about the ntion of iterating an operator (applying it several times), In this contex we had a brief look at the norion of cartesian product. This will be studied in greater detail in a later module.
+
+We looked at basic arithmetic operations of addition, subtraction, multiplication and division. For the arithmetic operations as well as the logical connectives of the propositional lgic module, we studied the mathematical operator related notions of {\bf commutativity, associativity and distributivity}. 
+
+In order to define these terms precisely we introduced the notions of the existential quantifier ($\exists$), and the universal quantifier ($\forall$).
+
+ An operation $o$ is commutative if $x o y= y o x$, $\forall x,y$. It is non-commutative if $\exists x,y | xoy \neq y o x$.
+
+Addition, multiplication, AND ($\wedge$) and OR ($\vee$) are commutative. Subtraction, division and implication ($\Rightarrow$) are not. 
+
+When we apply a binary operator repeatedly in a chain, then apart from not changing the order of the operands, changing the order in which we apply the operations could also affect the result. Operation where changing the order of evaluation does not alter the result are called {\bf associative}. Where the result depends on the order of evaluation, the operatios are called {\bf non-associative}. Addition, AND and OR are associative. However, subtraction, division and implication are not associative. Further, a mix of AND and OR is not associative. 
+
+Example $(p\wedge q)\vee r$ is not semantically identical to $p\wedge(q\vee r)$.
+
+An exercise for students is to check whether $(p\Rightarrow q)\Rightarrow r)$ is equvialent to $p\rightarrow (q\Rightarrow r)$ are semantically identical. If the answer is no, then they should try to figure how many satisfying assignments each has (among the possible 8 assignments). A {\bf satisfying assignment for a formula} is and assignment of truth values to its variables, such that the formula evaluates ot true. You should also try to figure if one of these two formulas is implied by the other. Meaning, whenever formula 1 is true, formula 2 is also true. This qualifies as a logical deduction, as we will see later.
+
+{\bf distributivity} is usually in the context of two distinct operators. Multiplication distributes over addition: $(a\times (b+c)=a\times b + a\times c$. However, addition does not distribute over multiplication.
+
+In the framework of propositional logic, the following distributive laws are known. 
+
+\[p\wedge(q\vee r)\equiv (p\wedge q)\vee (p\wedge r)\]
+and
+\[p\vee(q \wedge r)\equiv (p\vee q)\wedge(p\vee r)\]
+Thus AND distributes over OR and vice verse.
+
+We saw the notion of {\bf short-circuiting} the evalutation of a logical formula, in the context of AND and OR. It is the process of stopping the computation, prematurely, if the result is already known. The students should learn to extend this technique to all logical formulae we will look at later, and not limit it to only AND and OR.
+
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\title{Mathematical Logic- Semantics (truth tables/ equivalent formulae)}
+\begin{document}
+\maketitle
+The semantics of formulae built up syntactically using logical connectives is evaluated by iteratively applying the basic rules of semantics at each sub-formula (formula tree node). 
+
+The basic semantics are given in the following two tables.
+\begin{table}[h!]
+  \begin{center}
+    \caption{Negation/ NOT}
+    \begin{tabular}{|c|c|} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      \hline
+$p_1$ & $\neg p_1$\\
+\hline
+      0  & 1\\
+      \hline
+      1 & 0\\
+      \hline
+       \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Standard binry connectives}
+    \begin{tabular}{|c|c|c|c|c|c|c|} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      \hline
+$p_1$ & $p_2$ & $p_1\wedge p_2$& $p_1\vee p_2$& $p_1\Rightarrow p_2$ & $p_1\Leftrightarrow p_2$ & $p_1\oplus p_2$\\
+\hline
+0& 0 & 0&0&  1& 1 &0\\
+\hline
+0& 1 &0 &1&  1&  0&1\\
+\hline
+1& 0 &0 &1&  0&  0&1\\
+\hline
+1& 1 & 1&1&  1&  1&0\\
+\hline
+
+       \end{tabular}
+  \end{center}
+\end{table}
+
+Given an arbitrary syntactic formula in propositional logic, one can order the operators and then evaluate the formula under any assignment, by applying the basic rules shown in the preceeeding two truth tabes. 
+
+Applying the following rules as appropriate, one can transform any foirmula int one using only
+\begin{itemize}
+\item  NOT and OR 
+\item  NOT and AND
+\end{itemize}
+{\bf Rules}
+\begin{enumerate}
+\item $p\Rightarrow q\equiv \neg p\vee q$
+\item $p\Leftrightarrow q\equiv ((p\Rightarrow q)\wedge (q\rightarrow q))$ 
+\item $p\oplus q\equiv \neg(p\Leftrightarrow q)$
+\end{enumerate}
+
+The basic truth tables allow us to evaluate the semaitics of any syntactic formula systemmatically. However, we now need to demonstrate the reverse problem:\\
+{\bf Given any semantic formula in the form of a truth table, construct a syntactic formula for it using the standard logical connectives}. We will address this problem using two standard formats to represent any formula in propositional logic.
+These are:
+\begin{enumerate}
+\item Conjunctive Normal Form (CNF): Here the formula is written as the AND of several clauses. A clause is the OR of several literals. a Literal is either a propositional variable or its negation.
+\item Disjunctive Normal Form (DNF): Here the formula is written as the OR of several clauses. A clause is the AND of several literals. a Literal is either a propositional variable or its negation.
+\end{enumerate}
+
+We will use this to translate any formula from truth table form to CNF or DNF.
+
+A {\bf satisfying assignment} for a formula is any assignment that makes the formula evaluate to true. Computationally it is a difficult problem to know whether a formula has any satisfying assignments. The brute force way of trying every assignment is not ideal since a formula with $k$ variables has $2^k$ assignments which is a large number. A formula that is satisfied under all possible assignments is called a {\bf tautology} or {\bf validity}. A formula that evaluates to false under all possible assignments is called a {\bf contradiction}. 
+
+Two formulae are {\bf (semantically) equivalent} if they evaluate to the same truth value under identical assignments. If $\phi$ and $\psi$ are two formulae, then we say $\phi\Rightarrow\psi$ if {\bf every} assignment that makes $\phi$ true, also make $\psi$ true. This is consistent with our standard definition of the $\Rightarrow$ logical connective. An example of such a pair of formula is:$\phi = p\wedge q$ and $\psi=p\vee q$. There are many others, and these can be used to make logical deductions. These are called {\bf inference rules}. 
+\end{document}

@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\title{Principle of Inclusion-Exclusion}
+\begin{document}
+\maketitle
+The cardinality of a set, is the number of elements it contains. This is for finite sets. Sets with infinite cardinality (like integers, real numbers, rational numbers, irrational numbers etc) have a further grading of the cardinality {\bf infinity}, but we mihgt look at this later on in the course. If a set is $A$, then its cardinality is denoted by $|A|$. 
+
+Given a collection of $n$ sets, the {\bf principle of inclusion-exclusion} expresses the cardinality of their union, in terms of the cardinalities of the individual sets as well as overlap among various of these sets. The central idea behind this principle is to offset the effects of {\bf over-counting} and {\bf under-counting}. This is the idea we are going to use in proving the correctness of the formula. Mathematically, let us denote,
+\[S=\{A_1,\ldots,A_n\}\]
+Notice, that in this case, the set $S$ is a {\bf set of sets}.
+Then the principle may be stated as:
+\[\left|\bigcup_{i=1}^n A_i\right|=\sum_{j=1}^n\left(\sum_{T\subseteq S, |T|=j}(-1)^{j+1}\left|\bigcap_{e\in T} e\right|\right)\]
+
+This principle refers to the cardinality of the union on the left hand side of the equation. On the right hand side, the first summation iterates through the number of sets whose overlap we are considering. This is mapped in terms of the cardinality of subsets $T$ of $S$. For each such we take the intersection (overlap) of the corresponding sets in the collection of sets. We have a $(-1)^{j+1}$ multiplier. This alternates in sign as $j$ iterates. The + is to offset and under-counting, and the - is to off set an over-counting.
+
+While this rule looks intuitively fine, it is by no means obvious. It needs a proof. We are going to give a proof that focusses on individual elements rather than on sets. 
+
+The central idea used in our proof is {\bf every element in the union on the left hand side, is counted exactly once -not more, not less-}, on the right hand side. 
+
+The baic step is to take an arbitrary element and establish that it is counted exactly once. We do this, using as part of the proof, the number of sets in the original collection, that element appears in.
+
+Consider an element that appears in exactly $k$ of the original sets; $1\le k \le n$. It occurrence in intersections of sets will have the following frequencies, as the number of sets increases from 1 to $n$:
+\[{k\choose 1},\cdots,{k \choose k}, 0,\ldots,0\]
+The sume of these terms, is the number of times the element is counted on the right hand side of the formula corresponding to the principle of inclusion-exclusion; with the caveat that the signs alternate.
+
+Foir example, for an element that appears in exactly 4 of the original sets, the number of times it would be counted is:
+\[{4\choose1}-{4\choose2}+{4\choose3}-{4\choose4}=4-6+4-1=1\]
+
+It turns out, this answer is {\bf always 1}, no matter what the value of $k$ is.
+
+Remember from the binomial theorem covered in high school 
+\[(x-y)^n=\sum_{i=0}^n{n\choose i}x^i(-y)^{n-i}\]
+In this formula, we set $x=y=1$. This the left hand side is 0. Thus,
+\[\sum_{i=0}^n{n\choose i}(-1)^{n-i}\]
+
+The first term: ${n\choose0}(({-1})^n)$ is the only one missing from our formula for the number of times an element is counted. This missing term is either -1 or 1 depending on whether $n$ is  odd or even. 
+
+{\bf When $n$ is odd:}\\
+This value is -1, and the sum from second term onwards represents the correct term in our formula for the number of times an element is counted. Thus transferring the first term to the left hand side, we see that the number of times such an element is counted is 1.
+
+{\bf When $n$ is even:}\\
+This value is 1, and the sum from second term onwards represents the {\bf negative} of the correct term in our formula for the number of times an element is counted. Thus transferring the second term and beyond to the left hand side, we see that the number of times such an element is counted is 1. Thus in each case an element is counted exactly once, whether it appears in an odd number of sets or an even number of sets. This completes the proof.
+
+\end{document}

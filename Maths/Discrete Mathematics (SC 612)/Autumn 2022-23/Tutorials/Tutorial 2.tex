@@ -1,0 +1,34 @@
+\documentclass[11pt]{article}
+\title{Sets: definition, and some operations}
+\begin{document}
+\maketitle
+A {\bf set} is a collection of distinct, well-defined objects.
+
+There is no requirement for the objects to be of a similar nature. 
+
+The {\bf well-defined} attribute gives rise to the notions of {\bf truth, proof and computability}.
+  
+Every precisely defined statement has an unambiguous truth value even if it is not known. This is the truth.
+
+Successfully establishing it is proof.
+
+Supplying precise descriptions constitutes computability.
+
+We have {\bf static sets}, which are unchanging, as well as dynamic ones that can be modified with time using inserts and deletes.
+
+A subset is also a set, such that its every element comes from within the set. 
+
+If $A$ and $B$ are sets then $A$ is a subset of $B$ if $\{x\in A\}\Rightarrow \{x\in B\}$.
+
+Subset containment is not commutative. It is antisymmetric.
+
+The subset containment is transitive:\\
+$((A\subseteq B) \wedge (B \subseteq C)) \Rightarrow (A\subseteq B \subseteq C)$.
+
+The number of subsets of an $n$ element set is $2^n$. This was proved using mathematical induction on $n$ and also by a bijective mapping to the set of all binary strings of length $n$. Binary strings are strings over $0$ and $1$.
+
+We defined Intersection, Union and Complement. These correspond to the logical operations of AND, OR and NOT. For the third one, we needed a notion of a {\bf universal set}.
+
+We looked at the concept of {\bf Venn Diagrams}. We looked at the formula for computing the union of sets called the Principle of Inclusion-Exclusion in its general form.
+
+\end{document}

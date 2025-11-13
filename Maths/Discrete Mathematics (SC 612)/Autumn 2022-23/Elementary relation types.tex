@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+\title{Elementary relation types}
+\begin{document}
+\maketitle
+Here, we consider binary relations from a set $S$ onto itself. By binary, we mean we apply the cartesian product only once between $S$ and itself and take the subsets. In general we could apply it several times, giving  rise to higher order relations.
+
+A {\bf reflexive relation} $R$ on a set $S$ is one such that $\forall s\in S, (s,s)\in R$.
+ 
+An {\bf irreflexive relation} $R$ on a set $S$ is one such that $\forall s\in S, (s,s)\notin R$.
+
+As can be observed, there is no single relation that is both reflexive and irreflexive. However, there are relations that fall into neither category.
+
+The counts of these categories is:
+\begin{itemize}
+\item Number of reflexive relations$=2^{n^2-n}$
+\item Number of irreflexive relations$=2^{n^2-n}$
+\item The number of relatios that do not fall into either of the above categories$=2^{n^2}-2^{n^2-n+1}$
+\end{itemize}
+
+A {\bf symmetric relation} $R$ on a set $S$ is one such that 
+\[\forall s_1,s_2\in S,((((s_1,s_2)\in R) \wedge ((s_2,s_1)\in R))\vee(((s_1,s_2)\notin R) \wedge ((s_2,s_1)\notin R)))\] 
+
+An {\bf anti-symmetric} relation $R$ on a set $S$ is one such that 
+\[\forall s_1,s_2\in S, \mbox{ such that } s_1\neq s_2, \neg(((s_1,s_2)\in R)\wedge ((s_2,s_1)\in R))\]
+
+Number of symmetric relations $=2^{n+{n \choose 2}}$
+
+Number of anti-symmetric relations$=2^n\times3^{{n\choose 2}}$
+
+Transitive relations will be covered in the next lecture.
+\end{document}

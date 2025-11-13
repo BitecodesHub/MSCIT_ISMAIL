@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+\title{Cartesian Product}
+\begin{document}
+\maketitle
+We looked at the operation of {\bf set difference} in the context of sets. Given two sets $A$ and $B$, the set difference:\[A\setminus B=\{x|(x\in A)\wedge \neg(x\in B)\}\]
+
+Set difference is a {\bf non-commutative} operation. 
+
+The {\bf symmetric difference} of two sets is the union of their set differences. This is denoted by the symbol $\Delta$, usually. Thus $A \Delta B=(A\setminus B) \cup( B\setminus A)$.
+
+It is easy to show that $A\Delta B= \{(x\in A)\oplus (x\in B)\}$.
+
+The {\bf power set} of a set, is a set of all its subsets. Thus if a set is $A$ then its power set is $\mathcal{P}(A)$. It is also often denoted by $2^A$. The number of elements in the power set of $n$ elements is $2^n$. Example:
+
+$S=\{1,2,3\}$
+
+$2^S=\{\emptyset, \{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\}\}$.
+
+The {\bf Cartesian Product} of a set $S$ to a set $T$ is:
+\[S\times T=\{(x,y)|x\in S, y\in T\}\]
+
+The result of the cartesian product of two sets is again a set. Thus one can apply the cartesian product again using that new set. The cartesian product is a non-commutative operation. 
+
+There is no condition on the two sets between which we are applying the cartesian product operation. The cardinality of the result is:
+\[|S\times T|=|S|.|T|\]
+It is allowed for the two sets to be identical. Thus we can have $S\times S$. If $S$ is a set on $n$ elements then the cartesian product has $n^2$ elements.
+
+A {\bf relation} is any subset of the cartesian product. Thus, if the sets are distinct, we talk of a relation from $S$ to $T$. If the two sets are identical then we call it a relation on $S$.
+
+In general if we define a relation, which is a subset of the cartesian product of two (not necessarily distinct) sets, the first set is called the {\bf domain} of the function and the second set is called the {\bf codomain} of the function.
+\end{document}

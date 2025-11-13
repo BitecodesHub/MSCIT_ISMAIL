@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+\newtheorem{theorem}{Theorem}
+\title{Partial orders}
+\begin{document}
+\maketitle
+A {\bf partial order} is a reflexive, anti-symmetric and transitive relation on a set.
+
+A directed acyclc graph is is a graph without self loops where every edge has exactly one direction and there are no directed cycles.
+
+In an undirected graph the degree of a vertex is the number of edges incident to it.
+
+In a directed graph this number is divided into two parts. The number of edges coming into a vertex is called its {\bf in-degree}. The number of edges going out of a vertex is called its {\bf out-degree}.
+
+In a directed graph a {\bf source} is a vertex of in-degree 0. A {bf sink} is a vertex of out-degree 0. Every directed acyclic graph ({\sc dag}) on a finite number of vertices, has at least one source and at least oe sink. The proof is by contradiction. Suppose the graph has no sink, then one can start at a vertex and always follow at least one out going edge. Thus one can keep wandering for ever but since the number of vertices is finite, some vertex will be repeated, according to the {\bf pigeon hole principle}. This indicates the presence of a cycle, contradicting {\sc dag}. An identical argument can be used to show that every {\sc dag} must have at least oe source.
+
+A partial order is a special case of a directed acyclic graph, where the self-loops are added, and it respects transitivity. Thus, associated with any directed acyclic graph, one can obatin a unique minimal partial order containing the given directed acyclic graph. this is done by adding self-loops and taking the transitive closure.
+
+On the other extreme, we can start with any directed acyclic graph (including a partial order) and eliminate all edges whose presence can be inferred by transitive closure to get a minimal structure that goes by the name {\bf Hasse diagram}.
+\newpage
+
+
+We classify {\bf partial orders} into the following four disjoint categories:
+\begin{enumerate}
+\item An {\bf upper lattice} is a partial order that has a unique sink but at least two sources.
+\item A {\bf lower lattice} is a partial order that has a least two sinks but has a unique source.
+\item A {\bf lattice} is a partial order that has a unique source and a unique sink.
+\item Other partial orders have more than one source and more than one sink.
+\end{enumerate}
+\end{document}
