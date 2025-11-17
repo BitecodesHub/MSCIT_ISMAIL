@@ -12,8 +12,7 @@ MSCIT_ISMAIL/
 ├── DBMS/
 ├── DSA/
 ├── Maths/
-├── Programming/
-└── .DS_Store
+├── Programm/
 ```
 
 ## 🎯 Subjects Covered  
