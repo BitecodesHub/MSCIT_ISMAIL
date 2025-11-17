@@ -2,4 +2,6 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+# Git ignore file itself
 .gitignore
+
